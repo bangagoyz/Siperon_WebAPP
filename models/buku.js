@@ -15,9 +15,6 @@ const bookSchema = new Schema({
     tahunTerbit: {
       type: Number
     },
-    gambar: {
-      type: String
-    },
     sedia : {
       type: Boolean,
       default : true

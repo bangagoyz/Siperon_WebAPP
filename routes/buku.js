@@ -1,29 +1,23 @@
 const router = require('express').Router()
 const bukuController = require('../controllers/bukuController')
-const uploadConfig = require('../uploadConfig')
-const fields = uploadConfig.upload.fields([
-  {
-    name: 'gambar',
-    maxCount: 1
-  }
-])
+// const uploadConfig = require('../uploadConfig')
+// // const fields = uploadConfig.upload.fields([
+// //   {
+// //     name: 'gambar',
+// //     maxCount: 1
+// //   }
+// // ])
 
-router.post('/create', fields, (req, res) => {
-  req.body.gambar = req.files.gambar[0].filename
+router.post('/create', (req, res) => {
+  // req.body.gambar = req.files.gambar[0].filename
   // console.log(req.body)
   bukuController.create(req.body)
     .then(result => res.json(result))
     .catch(err => res.json(err))
 })
 
-router.put('/edit/:id', fields, (req, res) => {
-  const gambar = uploadConfig.cekNull(req.files.gambar)
+router.put('/edit/:id',(req, res) => {
   let data = req.body
-  if (gambar) {
-    data.gambar = gambar
-  } else {
-    delete data.gambar
-  }
   console.log(data)
   bukuController.edit(req.params.id, data)
     .then(result => res.json(result))
