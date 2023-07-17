@@ -19,10 +19,6 @@ const bookSchema = new Schema({
       type: Boolean,
       default : true
     },
-    idUser : {
-      type: objectId,
-      default : null
-    },
 })
 
 module.exports = mongoose.model('book', bookSchema)

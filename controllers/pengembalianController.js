@@ -14,7 +14,7 @@ exports.create = (data) =>
                 .then(() => {
                     buku.updateOne({
                         _id: data.idBuku,
-                    }, {idUser: null})
+                    }, {idUser: 1})
                     .then(() => {
                         peminjaman.updateOne({
                             _id: data.idPeminjaman,

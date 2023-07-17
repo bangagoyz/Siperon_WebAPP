@@ -51,18 +51,19 @@ exports.getById = (id) =>
       }))
   })
 
-exports.edit = (id, data) =>
-  new Promise((resolve, reject) => {
-    bukuModel.updateOne({
-      _id: id
-    }, data).then(() => resolve({
-      sukses: true,
-      msg: 'Berhasil Edit Data'
-    })).catch(() => reject({
-      sukses: false,
-      msg: 'Gagal Edit Data'
-    }))
-  })
+  exports.edit = (id, data) =>
+    new Promise((resolve, reject) => {
+      bukuModel.updateOne({
+        _id: id
+      }, data).then(() => resolve({
+        sukses: true,
+        msg: 'Berhasil Edit Data'
+      })).catch(() => reject({
+        sukses: false,
+        msg: 'Gagal Edit Data'
+      }))
+    })
+
 
 exports.delete = (id) =>
   new Promise((resolve, reject) => {

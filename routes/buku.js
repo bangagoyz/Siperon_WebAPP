@@ -18,7 +18,7 @@ router.post('/create', (req, res) => {
 
 router.put('/edit/:id',(req, res) => {
   let data = req.body
-  console.log(data)
+  // console.log(data)
   bukuController.edit(req.params.id, data)
     .then(result => res.json(result))
     .catch(err => res.json(err))
