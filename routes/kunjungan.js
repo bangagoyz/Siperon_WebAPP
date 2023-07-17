@@ -3,8 +3,6 @@ const kunjunganController = require('../controllers/kunjunganController')
 
 
 router.post('/create', (req, res) => {
-    // req.body.buktiPembayaran = req.files.buktiPembayaran[0].filename
-
     kunjunganController.create(req.body)
         .then(result => res.json(result))
         .catch(err => res.json(err))

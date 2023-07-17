@@ -126,7 +126,7 @@ exports.getByIdUser = (id) =>
                 },
                 {
                     $match: {
-                        idUser: objectId(id)
+                        idUser: new objectId(id)
                     }
                 },
                 { $sort: { _id: -1 } }
@@ -166,7 +166,7 @@ getByIdUserLimit = (id, limit) =>
                 },
                 {
                     $match: {
-                        idUser: objectId(id)
+                        idUser: new objectId(id)
                     }
                 },
                 { $sort: { _id: -1 } },

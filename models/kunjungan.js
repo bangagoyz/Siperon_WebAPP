@@ -13,8 +13,8 @@ const kunjunganSchema = new Schema({
       default: dateJakarta.toString(),
       type:String,
     
-  },
-  status:{
+    },
+    status:{
     type:Number,
     default:0
 },
