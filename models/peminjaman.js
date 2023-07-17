@@ -16,7 +16,7 @@ const peminjamanSchema = new Schema({
 
         // type:Date,
         type:String,
-    default: dateJakarta.toString(),
+    // default: dateJakarta.toString(),
         // default: () => new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' })
 
     },
