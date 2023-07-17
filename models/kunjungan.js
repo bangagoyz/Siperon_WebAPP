@@ -10,7 +10,6 @@ const kunjunganSchema = new Schema({
         type:objectId
     },
     tanggal:{
-      default: dateJakarta.toString(),
       type:String,
     
     },
